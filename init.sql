@@ -1,0 +1,32 @@
+CREATE DATABASE lo54;
+
+\c lo54;
+
+CREATE TABLE IF NOT EXISTS LOCATION(
+   location_id serial NOT NULL PRIMARY KEY,
+   city VARCHAR (50) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS COURSE(
+   code VARCHAR (50) NOT NULL PRIMARY KEY,
+   title VARCHAR (50) UNIQUE NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS COURSE_SESSION(
+   course_session_id serial NOT NULL PRIMARY KEY,
+   start_date TIMESTAMP NOT NULL,
+   end_date TIMESTAMP NOT NULL,
+   max INTEGER,
+   course_code VARCHAR (50) NOT NULL REFERENCES COURSE(code),
+   location_id serial NOT NULL REFERENCES LOCATION(location_id)
+);
+
+CREATE TABLE IF NOT EXISTS CLIENT(
+   client_id serial NOT NULL PRIMARY KEY,
+   lastname VARCHAR (50) NOT NULL,
+   firstname VARCHAR (50) NOT NULL,
+   addresse VARCHAR (355) NOT NULL,
+   phone VARCHAR (20) NOT NULL,
+   email VARCHAR (355) NOT NULL,
+   course_session_id serial NOT NULL REFERENCES COURSE_SESSION(course_session_id)
+);

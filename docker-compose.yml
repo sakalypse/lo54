@@ -3,13 +3,13 @@ version: '3.3'
 services:
   PostgreSQL:
     restart: always
-    image: sameersbn/postgresql:10-2
+    image: "postgres:11"
     ports:
       - "5432:5432"
     environment:
       - DEBUG=true
-      - DB_USER=root
-      - DB_PASS=root
-      - DB_NAME=lo54
+      - PGDATABASE=lo54
+      - PGUSER=postgres
     volumes:
       - /srv/docker/postgresql:/var/lib/postgresql
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql #sql script to create tables at entrypoint
