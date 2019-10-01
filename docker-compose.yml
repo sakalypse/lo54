@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  PostgreSQL:
+    restart: always
+    image: sameersbn/postgresql:10-2
+    ports:
+      - "5432:5432"
+    environment:
+      - DEBUG=true
+      - DB_USER=root
+      - DB_PASS=root
+      - DB_NAME=lo54
+    volumes:
+      - /srv/docker/postgresql:/var/lib/postgresql
