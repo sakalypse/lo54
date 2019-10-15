@@ -4,20 +4,20 @@ import java.io.Serializable;
 
 public class Client implements Serializable {
 
-    private String client_id;
+    private long client_id;
     private String lastname;
     private String firstname;
     private String addresse;
     private String phone;
     private String email;
-    private String course_session_id;
+    private long course_session_id;
 
     public Client() {
     
     }
 
-    public Client(String client_id, String lastname, String firstname, 
-                  String addresse, String phone, String email, String course_session_id) {
+    public Client(long client_id, String lastname, String firstname, 
+                  String addresse, String phone, String email, long course_session_id) {
         this.client_id = client_id;
         this.lastname = lastname;
         this.firstname = firstname;
@@ -27,11 +27,11 @@ public class Client implements Serializable {
         this.course_session_id = course_session_id;
     }
 
-    public String getClientId() {
+    public long getClientId() {
         return client_id;
     }
 
-    public void setClientId(String client_id) {
+    public void setClientId(long client_id) {
         this.client_id = client_id;
     }
 
@@ -75,11 +75,11 @@ public class Client implements Serializable {
         this.email = email;
     }
 
-    public String getCourseSessionId() {
+    public long getCourseSessionId() {
         return course_session_id;
     }
 
-    public void setCourseSessionId(String course_session_id) {
+    public void setCourseSessionId(long course_session_id) {
         this.course_session_id = course_session_id;
     }
 
