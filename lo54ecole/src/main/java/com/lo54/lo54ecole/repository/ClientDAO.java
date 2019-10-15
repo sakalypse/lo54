@@ -12,10 +12,27 @@ import com.lo54.lo54ecole.entity.Client;
 
 public class ClientDAO {
 
-    private Session currentSession;
-     
-    private Transaction currentTransaction;
+    private SessionFactory sessionFactory;
  
-    public ClientDAO() {
+    public ClientDAO(SessionFactory sf) {
+        sessionFactory = sf;
+    }
+
+    public void Save(Client c){
+        Session sess = sessionFactory.openSession();
+        Transaction tx=null;
+        try {
+            tx = sess.beginTransaction();
+            //save client c
+            sess.save(c);
+            tx.commit();
+        }
+        catch (Exception e) {
+            if (tx!=null) tx.rollback();
+            throw e;
+        }
+        finally {
+            sess.close();
+        }
     }
 }
