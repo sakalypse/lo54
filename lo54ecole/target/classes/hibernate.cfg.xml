@@ -23,6 +23,9 @@
   
         <!-- Annotated entity classes -->
         <mapping class="com.lo54.lo54ecole.entity.Client"/>
+        <mapping class="com.lo54.lo54ecole.entity.Course"/>
+        <mapping class="com.lo54.lo54ecole.entity.CourseSession"/>
+        <mapping class="com.lo54.lo54ecole.entity.Location"/>
          
     </session-factory>
 </hibernate-configuration>
