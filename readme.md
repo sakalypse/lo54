@@ -9,7 +9,7 @@ $ psql -h localhost -p 5432 -U postgres
 
 
 Build the project
-$ mvn package
+$ mvn clean install package
 
 Run main
-$ java -cp target/lo54ecole-1.0-SNAPSHOT.jar com.lo54.lo54ecole.App
+$ java -cp target/lo54ecole-1.0-SNAPSHOT.jar:libs/* com.lo54.lo54ecole.App

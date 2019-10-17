@@ -1,1 +1,9 @@
+com/lo54/lo54ecole/entity/Location.class
+com/lo54/lo54ecole/repository/CourseDAO.class
 com/lo54/lo54ecole/App.class
+com/lo54/lo54ecole/entity/CourseSession.class
+com/lo54/lo54ecole/repository/ClientDAO.class
+com/lo54/lo54ecole/entity/Client.class
+com/lo54/lo54ecole/repository/LocationDAO.class
+com/lo54/lo54ecole/entity/Course.class
+com/lo54/lo54ecole/repository/CourseSessionDAO.class

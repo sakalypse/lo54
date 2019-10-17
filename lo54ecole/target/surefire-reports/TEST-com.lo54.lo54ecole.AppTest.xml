@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.lo54.lo54ecole.AppTest" time="0.021" tests="1" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.lo54.lo54ecole.AppTest" time="0.025" tests="1" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="gnome"/>
     <property name="awt.toolkit" value="sun.awt.X11.XToolkit"/>
@@ -7,7 +7,7 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/sakalypse/projects/lo54/lo54ecole/target/test-classes:/home/sakalypse/projects/lo54/lo54ecole/target/classes:/home/sakalypse/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/sakalypse/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="java.class.path" value="/home/sakalypse/projects/lo54/lo54ecole/target/test-classes:/home/sakalypse/projects/lo54/lo54ecole/target/classes:/home/sakalypse/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/sakalypse/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/sakalypse/.m2/repository/postgresql/postgresql/9.1-901-1.jdbc4/postgresql-9.1-901-1.jdbc4.jar:/home/sakalypse/.m2/repository/org/hibernate/hibernate-core/3.6.1.Final/hibernate-core-3.6.1.Final.jar:/home/sakalypse/.m2/repository/antlr/antlr/2.7.6/antlr-2.7.6.jar:/home/sakalypse/.m2/repository/commons-collections/commons-collections/3.1/commons-collections-3.1.jar:/home/sakalypse/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/sakalypse/.m2/repository/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.jar:/home/sakalypse/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar:/home/sakalypse/.m2/repository/javax/transaction/jta/1.1/jta-1.1.jar:/home/sakalypse/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar:/home/sakalypse/.m2/repository/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar:"/>
     <property name="java.vm.vendor" value="Private Build"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="http://java.oracle.com/"/>
@@ -17,8 +17,8 @@
     <property name="user.country" value="FR"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/amd64"/>
-    <property name="sun.java.command" value="/home/sakalypse/projects/lo54/lo54ecole/target/surefire/surefirebooter6951302051861291902.jar /home/sakalypse/projects/lo54/lo54ecole/target/surefire 2019-10-15T13-28-55_685-jvmRun1 surefire661616830458614638tmp surefire_02647763159516743119tmp"/>
-    <property name="surefire.test.class.path" value="/home/sakalypse/projects/lo54/lo54ecole/target/test-classes:/home/sakalypse/projects/lo54/lo54ecole/target/classes:/home/sakalypse/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/sakalypse/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:"/>
+    <property name="sun.java.command" value="/home/sakalypse/projects/lo54/lo54ecole/target/surefire/surefirebooter2066423838795409743.jar /home/sakalypse/projects/lo54/lo54ecole/target/surefire 2019-10-17T14-34-29_155-jvmRun1 surefire8564091291700238938tmp surefire_03886108650379694155tmp"/>
+    <property name="surefire.test.class.path" value="/home/sakalypse/projects/lo54/lo54ecole/target/test-classes:/home/sakalypse/projects/lo54/lo54ecole/target/classes:/home/sakalypse/.m2/repository/junit/junit/4.11/junit-4.11.jar:/home/sakalypse/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar:/home/sakalypse/.m2/repository/postgresql/postgresql/9.1-901-1.jdbc4/postgresql-9.1-901-1.jdbc4.jar:/home/sakalypse/.m2/repository/org/hibernate/hibernate-core/3.6.1.Final/hibernate-core-3.6.1.Final.jar:/home/sakalypse/.m2/repository/antlr/antlr/2.7.6/antlr-2.7.6.jar:/home/sakalypse/.m2/repository/commons-collections/commons-collections/3.1/commons-collections-3.1.jar:/home/sakalypse/.m2/repository/dom4j/dom4j/1.6.1/dom4j-1.6.1.jar:/home/sakalypse/.m2/repository/org/hibernate/hibernate-commons-annotations/3.2.0.Final/hibernate-commons-annotations-3.2.0.Final.jar:/home/sakalypse/.m2/repository/org/hibernate/javax/persistence/hibernate-jpa-2.0-api/1.0.0.Final/hibernate-jpa-2.0-api-1.0.0.Final.jar:/home/sakalypse/.m2/repository/javax/transaction/jta/1.1/jta-1.1.jar:/home/sakalypse/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar:/home/sakalypse/.m2/repository/javassist/javassist/3.12.1.GA/javassist-3.12.1.GA.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="/home/sakalypse"/>
     <property name="user.language" value="fr"/>
@@ -30,7 +30,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.X11GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="/home/sakalypse/projects/lo54/lo54ecole/target/surefire/surefirebooter6951302051861291902.jar"/>
+    <property name="surefire.real.class.path" value="/home/sakalypse/projects/lo54/lo54ecole/target/surefire/surefirebooter2066423838795409743.jar"/>
     <property name="sun.boot.class.path" value="/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/resources.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/rt.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/sunrsasign.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jsse.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jce.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/charsets.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/lib/jfr.jar:/usr/lib/jvm/java-8-openjdk-amd64/jre/classes"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="1.8.0_222-8u222-b10-1ubuntu1~18.04.1-b10"/>
@@ -58,5 +58,5 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="shouldAnswerWithTrue" classname="com.lo54.lo54ecole.AppTest" time="0.002"/>
+  <testcase name="shouldAnswerWithTrue" classname="com.lo54.lo54ecole.AppTest" time="0.001"/>
 </testsuite>

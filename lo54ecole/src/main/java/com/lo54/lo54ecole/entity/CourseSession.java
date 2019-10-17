@@ -26,27 +26,27 @@ public class CourseSession implements Serializable {
         this.location_id = location_id;
     }
 
-    public long getCourseSessionId() {
+    public long getCourse_session_id() {
         return course_session_id;
     }
 
-    public void setCourseSessionId(long course_session_id) {
+    public void setCourse_session_id(long course_session_id) {
         this.course_session_id = course_session_id;
     }
 
-    public Date getStartDate() {
+    public Date getStart_date() {
         return start_date;
     }
 
-    public void setStartDate(Date start_date) {
+    public void setStart_date(Date start_date) {
         this.start_date = start_date;
     }
 
-    public Date getEndDate() {
+    public Date getEnd_date() {
         return end_date;
     }
 
-    public void setEndDate(Date end_date) {
+    public void setEnd_date(Date end_date) {
         this.end_date = end_date;
     }
 
@@ -58,19 +58,19 @@ public class CourseSession implements Serializable {
         this.max = max;
     }
 
-    public String getCourseCode() {
+    public String getCourse_code() {
         return course_code;
     }
 
-    public void setCourseCode(String course_code) {
+    public void setCourse_code(String course_code) {
         this.course_code = course_code;
     }
 
-    public long getLocationId() {
+    public long getLocation_id() {
         return location_id;
     }
 
-    public void setLocationId(long location_id) {
+    public void setLocation_id(long location_id) {
         this.location_id = location_id;
     }
 

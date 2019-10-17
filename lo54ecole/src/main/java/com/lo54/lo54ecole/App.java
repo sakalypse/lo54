@@ -1,5 +1,7 @@
 package com.lo54.lo54ecole;
 
+import com.lo54.lo54ecole.entity.Location;
+import com.lo54.lo54ecole.repository.LocationDAO;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import com.lo54.lo54ecole.entity.Client;
@@ -17,19 +19,25 @@ public class App
         //setup session database
         SetupSessionFactoryDatabase();
 
-        //test ajout d'un client
-        ClientDAO clientDAO = new ClientDAO(sessionFactory);
-        Client client = new Client("1",
-        "limacher", "kevin", 
-        "belfort", "069887760", "kevin@gmail.com",
-        "10");
-        clientDAO.Save(client);
+        //test add one location
+        LocationDAO locationDAO = new LocationDAO(sessionFactory);
+        Location location = new Location(2, "Belfort");
+        locationDAO.Save(location);
 
         System.out.println( "Hello World!" );
+        
     }
 
     private static void SetupSessionFactoryDatabase(){
-        Configuration config = new Configuration();
-        sessionFactory = config.buildSessionFactory();
+        try {
+            // Create the SessionFactory from hibernate.cfg.xml
+            sessionFactory = new Configuration()
+                        .configure()
+                        .buildSessionFactory();
+        } catch (Throwable ex) {
+            System.err.println("SessionFactory creation failed." + ex);
+            throw new ExceptionInInitializerError(ex);
+        }
+        
     }
 }

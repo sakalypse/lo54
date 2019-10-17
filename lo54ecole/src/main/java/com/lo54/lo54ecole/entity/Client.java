@@ -27,11 +27,11 @@ public class Client implements Serializable {
         this.course_session_id = course_session_id;
     }
 
-    public long getClientId() {
+    public long getClient_id() {
         return client_id;
     }
 
-    public void setClientId(long client_id) {
+    public void setClient_id(long client_id) {
         this.client_id = client_id;
     }
 
@@ -75,11 +75,11 @@ public class Client implements Serializable {
         this.email = email;
     }
 
-    public long getCourseSessionId() {
+    public long getCourse_session_id() {
         return course_session_id;
     }
 
-    public void setCourseSessionId(long course_session_id) {
+    public void setCourse_session_id(long course_session_id) {
         this.course_session_id = course_session_id;
     }
 

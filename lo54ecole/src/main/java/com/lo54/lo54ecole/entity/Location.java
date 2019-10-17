@@ -16,11 +16,11 @@ public class Location implements Serializable {
         this.city = city;
     }
 
-    public long getLocationId() {
+    public long getLocation_id() {
         return location_id;
     }
 
-    public void setLocatonId(long location_id) {
+    public void setLocation_id(long location_id) {
         this.location_id = location_id;
     }
 

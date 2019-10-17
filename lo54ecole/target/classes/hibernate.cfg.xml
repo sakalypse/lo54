@@ -20,12 +20,12 @@
   
         <!-- Update database on startup -->
         <property name="hibernate.hbm2ddl.auto">update</property>
-  
-        <!-- Annotated entity classes -->
-        <mapping class="com.lo54.lo54ecole.entity.Client"/>
-        <mapping class="com.lo54.lo54ecole.entity.Course"/>
-        <mapping class="com.lo54.lo54ecole.entity.CourseSession"/>
-        <mapping class="com.lo54.lo54ecole.entity.Location"/>
-         
+
+
+
+        <mapping resource="com/lo54/lo54ecole/entity/Client.hbm.xml"></mapping>
+        <mapping resource="com/lo54/lo54ecole/entity/Course.hbm.xml"></mapping>
+        <mapping resource="com/lo54/lo54ecole/entity/CourseSession.hbm.xml"></mapping>
+        <mapping resource="com/lo54/lo54ecole/entity/Location.hbm.xml"></mapping>
     </session-factory>
 </hibernate-configuration>
