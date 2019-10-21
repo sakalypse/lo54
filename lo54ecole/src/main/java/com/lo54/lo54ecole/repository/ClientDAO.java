@@ -34,4 +34,22 @@ public class ClientDAO {
             sess.close();
         }
     }
+
+    public Client GetById(long id){
+        Session sess = sessionFactory.openSession();
+        Transaction tx=null;
+        try {
+            tx = sess.beginTransaction();
+            //save client c
+            Client c = (Client) sess.get(Client.class, id);
+            return c;
+        }
+        catch (Exception e) {
+            if (tx!=null) tx.rollback();
+            throw e;
+        }
+        finally {
+            sess.close();
+        }
+    }
 }
