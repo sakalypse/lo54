@@ -1,21 +1,17 @@
 package com.lo54.lo54ecole.repository;
 
 import com.lo54.lo54ecole.entity.Location;
+import com.lo54.lo54ecole.utils.HibernateUtil;
 import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 public class LocationDAO {
-
-    private SessionFactory sessionFactory;
-
-    public LocationDAO(SessionFactory sf) {
-        sessionFactory = sf;
-    }
+    public LocationDAO() { }
 
     public void Save(Location l){
-        Session sess = sessionFactory.openSession();
+        Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {
             tx = sess.beginTransaction();
@@ -33,7 +29,7 @@ public class LocationDAO {
     }
 
     public Location GetByCity(String city){
-        Session sess = sessionFactory.openSession();
+        Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {
             tx = sess.beginTransaction();

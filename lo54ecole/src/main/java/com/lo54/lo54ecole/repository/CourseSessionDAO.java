@@ -1,20 +1,16 @@
 package com.lo54.lo54ecole.repository;
 
 import com.lo54.lo54ecole.entity.CourseSession;
+import com.lo54.lo54ecole.utils.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
 public class CourseSessionDAO {
-
-    private SessionFactory sessionFactory;
-
-    public CourseSessionDAO(SessionFactory sf) {
-        sessionFactory = sf;
-    }
+    public CourseSessionDAO() { }
 
     public void Save(CourseSession cs){
-        Session sess = sessionFactory.openSession();
+        Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {
             tx = sess.beginTransaction();
@@ -32,7 +28,7 @@ public class CourseSessionDAO {
     }
 
     public CourseSession GetById(long id){
-        Session sess = sessionFactory.openSession();
+        Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {
             tx = sess.beginTransaction();

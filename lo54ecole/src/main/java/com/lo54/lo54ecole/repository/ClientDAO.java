@@ -2,6 +2,7 @@ package com.lo54.lo54ecole.repository;
 
 import java.util.List;
 
+import com.lo54.lo54ecole.utils.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -10,15 +11,10 @@ import org.hibernate.Transaction;
 import com.lo54.lo54ecole.entity.Client;
 
 public class ClientDAO {
-
-    private SessionFactory sessionFactory;
- 
-    public ClientDAO(SessionFactory sf) {
-        sessionFactory = sf;
-    }
+    public ClientDAO() { }
 
     public void Save(Client c){
-        Session sess = sessionFactory.openSession();
+        Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {
             tx = sess.beginTransaction();
@@ -36,7 +32,7 @@ public class ClientDAO {
     }
 
     public Client GetById(long id){
-        Session sess = sessionFactory.openSession();
+        Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {
             tx = sess.beginTransaction();
