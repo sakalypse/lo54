@@ -6,6 +6,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 public class CourseSessionDAO {
     public CourseSessionDAO() { }
 
@@ -17,6 +19,23 @@ public class CourseSessionDAO {
             //save courseSession cs
             sess.save(cs);
             tx.commit();
+        }
+        catch (Exception e) {
+            if (tx!=null) tx.rollback();
+            throw e;
+        }
+        finally {
+            sess.close();
+        }
+    }
+
+    public List<CourseSession> getAll(){
+        Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=null;
+        try {
+            tx = sess.beginTransaction();
+            //save courseSession cs
+            return sess.createCriteria(CourseSession.class).list();
         }
         catch (Exception e) {
             if (tx!=null) tx.rollback();
