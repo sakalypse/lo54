@@ -6,6 +6,7 @@ import com.lo54.lo54ecole.entity.Location;
 import com.lo54.lo54ecole.repository.CourseDAO;
 import com.lo54.lo54ecole.repository.CourseSessionDAO;
 import com.lo54.lo54ecole.repository.LocationDAO;
+import com.lo54.lo54ecole.service.CourseService;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 import com.lo54.lo54ecole.entity.Client;
@@ -76,7 +77,6 @@ public class App
         System.out.println(clientDAO.GetById(1).toString());
          */
         System.out.println( "Hello World!" );
-        
     }
 
     private static void SetupSessionFactoryDatabase(){
