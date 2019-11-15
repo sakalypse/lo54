@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="lo54webapp:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>lo54webapp</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="lo54webapp.war">
+      <element id="artifact" artifact-name="lo54webapp:war exploded" />
+    </root>
+  </artifact>
+</component>

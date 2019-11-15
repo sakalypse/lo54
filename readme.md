@@ -12,4 +12,7 @@ Build the project
 $ mvn clean install package
 
 Run main
-$ java -cp target/lo54ecole-1.0-SNAPSHOT.jar:libs/* com.lo54.lo54ecole.App
+$ java -cp target/lo54ecole-1.0-SNAPSHOT.jar:lib/* com.lo54.lo54ecole.App
+
+Run tomcat server 
+$ mvn tomcat7:run

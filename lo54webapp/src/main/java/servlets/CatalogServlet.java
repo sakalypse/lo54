@@ -1,4 +1,4 @@
-package com.lo54.lo54ecole.servlet;
+package servlets;
 
 import com.lo54.lo54ecole.entity.CourseSession;
 import com.lo54.lo54ecole.service.CourseSessionService;
@@ -9,7 +9,7 @@ import javax.servlet.http.*;
 import java.io.*;
 import java.util.*;
 
-@WebServlet( name="CatalogServlet", urlPatterns = {"/", "/index", "/catalog"} )
+@WebServlet( name="CatalogServlet", urlPatterns = {"/catalog"} )
 public class CatalogServlet extends HttpServlet {
 
     CourseSessionService courseSessionService = new CourseSessionService();
@@ -26,15 +26,18 @@ public class CatalogServlet extends HttpServlet {
             switch (action) {
                 case "searchByTitle":
                     listCourseSession = courseSessionService.
-                            getCourseSessionByTitle(request.getParameter("searchValue"));
+                            getCourseSessionByTitle(
+                                    request.getParameter("searchValue"));
                     break;
                 case "searchByDate":
                     listCourseSession = courseSessionService.
-                            getCourseSessionByDate(request.getParameter("searchValue"));
+                            getCourseSessionByDate(
+                                    request.getParameter("searchValue"));
                     break;
                 case "searchByLocation":
                     listCourseSession = courseSessionService.
-                            getCourseSessionByLocation(request.getParameter("searchValue"));
+                            getCourseSessionByLocation(
+                                    request.getParameter("searchValue"));
                     break;
             }
         }else{
@@ -55,4 +58,5 @@ public class CatalogServlet extends HttpServlet {
         out.println("</BODY>");
         out.println("</HTML>");
     }
+
 }
