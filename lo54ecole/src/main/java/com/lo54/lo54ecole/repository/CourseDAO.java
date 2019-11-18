@@ -23,9 +23,6 @@ public class CourseDAO {
             if (tx!=null) tx.rollback();
             throw e;
         }
-        finally {
-            sess.close();
-        }
     }
 
     public Course GetByTitle(String title) {
@@ -42,8 +39,6 @@ public class CourseDAO {
         } catch (Exception e) {
             if (tx != null) tx.rollback();
             throw e;
-        } finally {
-            sess.close();
         }
     }
 }

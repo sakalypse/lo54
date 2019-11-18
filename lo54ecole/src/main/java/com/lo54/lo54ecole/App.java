@@ -21,12 +21,8 @@ import java.util.Date;
  */
 public class App 
 {
-    private static SessionFactory sessionFactory;
     public static void main( String[] args )
     {
-        //setup session database
-        SetupSessionFactoryDatabase();
-
         //test add Location **************************
         /*
         LocationDAO locationDAO = new LocationDAO(sessionFactory);
@@ -43,22 +39,22 @@ public class App
 
         //test add CourseSession ***********************
         /*
-        LocationDAO locationDAO = new LocationDAO(sessionFactory);
-        Location loc = locationDAO.GetByCity("Masevaux");
+        LocationDAO locationDAO = new LocationDAO();
+        Location loc = locationDAO.GetByCity("Belfort");
 
-        CourseDAO courseDAO = new CourseDAO(sessionFactory);
-        Course course = courseDAO.GetByTitle("Informatique");
+        CourseDAO courseDAO = new CourseDAO();
+        Course course = courseDAO.GetByTitle("informatique et business");
 
-        CourseSessionDAO courseSessionsDAO = new CourseSessionDAO(sessionFactory);
+        CourseSessionDAO courseSessionsDAO = new CourseSessionDAO();
         Date start=null, end=null;
         try {
             start = new SimpleDateFormat("yyyy-MM-dd").parse("2020-09-01");
             end = new SimpleDateFormat("yyyy-MM-dd").parse("2021-06-30");
         }catch(Exception e){}
         CourseSession courseSession = new CourseSession(
-                start, end,130, course, loc);
+                start, end,100, course, loc);
         courseSessionsDAO.Save(courseSession);
-        */
+         */
 
         //test add Client *****************************
         /*
@@ -77,18 +73,5 @@ public class App
         System.out.println(clientDAO.GetById(1).toString());
          */
         System.out.println( "Hello World!" );
-    }
-
-    private static void SetupSessionFactoryDatabase(){
-        try {
-            // Create the SessionFactory from hibernate.cfg.xml
-            sessionFactory = new Configuration()
-                        .configure()
-                        .buildSessionFactory();
-        } catch (Throwable ex) {
-            System.err.println("SessionFactory creation failed." + ex);
-            throw new ExceptionInInitializerError(ex);
-        }
-        
     }
 }

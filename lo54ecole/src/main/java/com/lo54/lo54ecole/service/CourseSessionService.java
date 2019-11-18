@@ -3,6 +3,7 @@ package com.lo54.lo54ecole.service;
 import com.lo54.lo54ecole.entity.CourseSession;
 import com.lo54.lo54ecole.repository.CourseSessionDAO;
 
+import java.util.Date;
 import java.util.List;
 
 public class CourseSessionService {
@@ -11,20 +12,21 @@ public class CourseSessionService {
         return csDao.GetById(id);
     }
 
-    //TODO :
+
     public List<CourseSession> getCourseSessionByTitle(String title){
         CourseSessionDAO csDao = new CourseSessionDAO();
-        return null;
+        return csDao.getByTitle(title);
     }
 
-    public List<CourseSession> getCourseSessionByDate(String date){
+
+    public List<CourseSession> getCourseSessionByDate(Date date){
         CourseSessionDAO csDao = new CourseSessionDAO();
-        return null;
+        return csDao.getByDate(date);
     }
 
     public List<CourseSession> getCourseSessionByLocation(String location){
         CourseSessionDAO csDao = new CourseSessionDAO();
-        return null;
+        return csDao.getByLocation(location);
     }
 
     public List<CourseSession> getAll(){

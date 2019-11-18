@@ -26,9 +26,6 @@ public class ClientDAO {
             if (tx!=null) tx.rollback();
             throw e;
         }
-        finally {
-            sess.close();
-        }
     }
 
     public Client GetById(long id){
@@ -43,9 +40,6 @@ public class ClientDAO {
         catch (Exception e) {
             if (tx!=null) tx.rollback();
             throw e;
-        }
-        finally {
-            sess.close();
         }
     }
 }

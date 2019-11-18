@@ -7,6 +7,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import java.util.List;
+
 public class LocationDAO {
     public LocationDAO() { }
 
@@ -23,8 +25,21 @@ public class LocationDAO {
             if (tx!=null) tx.rollback();
             throw e;
         }
-        finally {
-            sess.close();
+    }
+
+    public List<Location> getAll(){
+        Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
+        Transaction tx=null;
+        try {
+            tx = sess.beginTransaction();
+            Query query= sess.
+                    createQuery("from Location");
+            List<Location> loc = (List<Location>) query.list();
+            return loc;
+        }
+        catch (Exception e) {
+            if (tx!=null) tx.rollback();
+            throw e;
         }
     }
 
@@ -33,7 +48,6 @@ public class LocationDAO {
         Transaction tx=null;
         try {
             tx = sess.beginTransaction();
-            //save localisation l
             Query query= sess.
                     createQuery("from Location where city=:city");
             query.setParameter("city", city);
@@ -43,9 +57,6 @@ public class LocationDAO {
         catch (Exception e) {
             if (tx!=null) tx.rollback();
             throw e;
-        }
-        finally {
-            sess.close();
         }
     }
 }
