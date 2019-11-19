@@ -13,6 +13,9 @@ $ mvn clean install package
 # Run core main :
 $ java -cp target/lo54ecole-1.0-SNAPSHOT.jar:lib/* com.lo54.lo54ecole.App
 
+# See Graphite graphs
+Visit : localhost:80
+
 # Run tomcat server, inside directory "lo54webapp" :
 $ mvn tomcat7:run
 ```

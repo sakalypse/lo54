@@ -1,97 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="J2EE_WEB_MODULE" version="4"> 
-  <component name="FacetManager"> 
-    <facet type="web" name="Web"> 
-      <configuration> 
-        <descriptors> 
-          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml"/> 
-        </descriptors>  
-        <webroots> 
-          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/"/> 
-        </webroots> 
-      </configuration> 
-    </facet> 
-  </component>  
-  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7"> 
-    <output url="file://$MODULE_DIR$/target/classes"/>  
-    <output-test url="file://$MODULE_DIR$/target/test-classes"/>  
-    <content url="file://$MODULE_DIR$"> 
-      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false"/>
-      <excludeFolder url="file://$MODULE_DIR$/target"/>
-    </content>  
-    <orderEntry type="inheritedJdk"/>  
-    <orderEntry type="sourceFolder" forTests="false"/>  
-    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.11" level="project"/>  
-    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project"/>  
-    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:4.0.1" level="project"/>  
-    <orderEntry type="library" name="Maven: com.lo54.lo54ecole:lo54ecole:1.0-SNAPSHOT" level="project"/>  
-    <orderEntry type="library" name="Maven: postgresql:postgresql:9.1-901-1.jdbc4" level="project"/>  
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:3.6.1.Final" level="project"/>  
-    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.1" level="project"/>  
-    <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project"/>  
-    <orderEntry type="library" name="Maven: org.hibernate:hibernate-commons-annotations:3.2.0.Final" level="project"/>  
-    <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final" level="project"/>  
-    <orderEntry type="library" name="Maven: javax.transaction:jta:1.1" level="project"/>  
-    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.1" level="project"/>  
-    <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project"/>  
-    <orderEntry type="library" name="Maven: javassist:javassist:3.12.1.GA" level="project"/>  
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar:///home/sakalypse/.m2/repository/junit/junit/4.11/junit-4.11.jar!/"/>
-        </CLASSES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar:///home/sakalypse/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/"/>
-        </CLASSES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar:///home/sakalypse/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/"/>
-        </CLASSES>
-      </library>
-    </orderEntry>
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="jar:///home/sakalypse/projects/lo54/lo54webapp/lib/lo54ecole-1.0-SNAPSHOT.jar!/"/>
-        </CLASSES>
-      </library>
-    </orderEntry>
-  </component>  
-  <component name="WebModuleBuildComponent">
-    <setting name="EXPLODED_URL" value="file://$MODULE_DIR$/target/lo54webapp"/>
+<module org.jetbrains.idea.maven.project.MavenProjectsManager.isMavenModule="true" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="web" name="Web">
+      <configuration>
+        <descriptors>
+          <deploymentDescriptor name="web.xml" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml" />
+        </descriptors>
+        <webroots>
+          <root url="file://$MODULE_DIR$/src/main/webapp" relative="/" />
+        </webroots>
+      </configuration>
+    </facet>
   </component>
-  <component name="WebModuleProperties">
-    <containerElement type="library" level="module">
-      <attribute name="method" value="0"/>
-      <attribute name="URI" value="/WEB-INF/lib/junit-4.11.jar"/>
-      <url>jar:///home/sakalypse/.m2/repository/junit/junit/4.11/junit-4.11.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="0"/>
-      <attribute name="URI" value="/WEB-INF/lib/hamcrest-core-1.3.jar"/>
-      <url>jar:///home/sakalypse/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="0"/>
-      <attribute name="URI" value="/WEB-INF/lib/javax.servlet-api-4.0.1.jar"/>
-      <url>jar:///home/sakalypse/.m2/repository/javax/servlet/javax.servlet-api/4.0.1/javax.servlet-api-4.0.1.jar!/</url>
-    </containerElement>
-    <containerElement type="library" level="module">
-      <attribute name="method" value="0"/>
-      <attribute name="URI" value="/WEB-INF/lib/lo54ecole-1.0-SNAPSHOT.jar"/>
-      <url>jar:///home/sakalypse/projects/lo54/lo54webapp/lib/lo54ecole-1.0-SNAPSHOT.jar!/</url>
-    </containerElement>
-    <deploymentDescriptor version="2.3" name="web.xml" optional="false" url="file://$MODULE_DIR$/src/main/webapp/WEB-INF/web.xml"/>
-    <webroots>
-      <root relative="/" url="file://$MODULE_DIR$/src/main/webapp"/>
-    </webroots>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_7">
+    <output url="file://$MODULE_DIR$/target/classes" />
+    <output-test url="file://$MODULE_DIR$/target/test-classes" />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <excludeFolder url="file://$MODULE_DIR$/target" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" scope="TEST" name="Maven: junit:junit:4.11" level="project" />
+    <orderEntry type="library" scope="TEST" name="Maven: org.hamcrest:hamcrest-core:1.3" level="project" />
+    <orderEntry type="library" scope="PROVIDED" name="Maven: javax.servlet:javax.servlet-api:4.0.1" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-core:3.6.1.Final" level="project" />
+    <orderEntry type="library" name="Maven: commons-collections:commons-collections:3.1" level="project" />
+    <orderEntry type="library" name="Maven: dom4j:dom4j:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate:hibernate-commons-annotations:3.2.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: org.hibernate.javax.persistence:hibernate-jpa-2.0-api:1.0.0.Final" level="project" />
+    <orderEntry type="library" name="Maven: javax.transaction:jta:1.1" level="project" />
+    <orderEntry type="library" name="Maven: org.slf4j:slf4j-api:1.6.1" level="project" />
+    <orderEntry type="library" name="Maven: postgresql:postgresql:9.1-901-1.jdbc4" level="project" />
+    <orderEntry type="library" name="Maven: antlr:antlr:2.7.7" level="project" />
+    <orderEntry type="library" name="Maven: javassist:javassist:3.12.1.GA" level="project" />
+    <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-graphite:3.1.2" level="project" />
+    <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-core:3.1.2" level="project" />
+    <orderEntry type="library" name="Maven: com.codahale.metrics:metrics-jvm:3.0.2" level="project" />
+    <orderEntry type="library" name="Maven: com.codahale.metrics:metrics-core:3.0.2" level="project" />
+    <orderEntry type="module-library">
+      <library name="Maven: com.lo54.lo54ecole:lo54ecole:1.0-SNAPSHOT">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../lo54ecole/target/lo54ecole-1.0-SNAPSHOT.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>

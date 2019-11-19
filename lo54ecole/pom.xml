@@ -49,10 +49,6 @@
       <version>3.12.1.GA</version>
     </dependency>
 
-        <!--
-            https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
-        -->
-
 
   </dependencies>
 

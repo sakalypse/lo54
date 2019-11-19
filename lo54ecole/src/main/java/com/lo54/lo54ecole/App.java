@@ -1,5 +1,4 @@
 package com.lo54.lo54ecole;
-
 import com.lo54.lo54ecole.entity.Course;
 import com.lo54.lo54ecole.entity.CourseSession;
 import com.lo54.lo54ecole.entity.Location;
@@ -12,16 +11,18 @@ import org.hibernate.cfg.Configuration;
 import com.lo54.lo54ecole.entity.Client;
 import com.lo54.lo54ecole.repository.ClientDAO;
 
+import java.net.InetSocketAddress;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class App
 {
-    public static void main( String[] args )
+    public static void main( String[] args )throws InterruptedException
     {
         //test add Location **************************
         /*
