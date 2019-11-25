@@ -45,10 +45,6 @@ public class CatalogServlet extends HttpServlet {
         counter.inc();
         counter.dec();
 
-        ConsoleReporter consoleReporter = ConsoleReporter.forRegistry(metricRegistry).build();
-        consoleReporter.start(5, TimeUnit.MICROSECONDS);
-        consoleReporter.report();
-
         final Graphite graphite = new Graphite(new InetSocketAddress("localhost", 2003));
         final GraphiteReporter reporter = GraphiteReporter.forRegistry(metricRegistry)
                 .prefixedWith("prefix")

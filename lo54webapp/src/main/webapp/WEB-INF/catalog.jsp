@@ -73,6 +73,7 @@
         <th>Capacité max</th>
         <th>Date début</th>
         <th>Date fin</th>
+        <th>Inscription</th>
     </tr>
     <%
 
@@ -83,6 +84,9 @@
                 out.println("<td>" + cs.getMax() + "</td>");
                 out.println("<td>" + cs.getStart_date() + "</td>");
                 out.println("<td>" + cs.getEnd_date() + "</td>");
+                out.println("<td>" 
+                 +"<a href='http://localhost:8080/inscription/?cs=" + cs.getCourse_session_id() + "'>S'inscrire</a>"
+                 +"</td>");
                 out.println("</tr>");
             }
             out.println("</table>");
