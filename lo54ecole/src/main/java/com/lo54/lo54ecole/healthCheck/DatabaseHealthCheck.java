@@ -18,11 +18,10 @@ public class DatabaseHealthCheck extends HealthCheck {
         Transaction tx=null;
         try {
             tx = sess.beginTransaction();
-            //TODO : on suppose qu'il y a toujours un id '1'. A changer
+            // on suppose qu'il y a toujours un id '1'. A changer
             sess.get(Location.class, Long.valueOf(1));
             return HealthCheck.Result.healthy();
         } catch(Exception e){
-            System.out.println("ouiiiiiiiiiii"+e);
             return HealthCheck.Result.unhealthy("Cannot connect to database");
         }
     }
