@@ -38,6 +38,7 @@
     <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-core:3.1.2" level="project" />
     <orderEntry type="library" name="Maven: com.codahale.metrics:metrics-jvm:3.0.2" level="project" />
     <orderEntry type="library" name="Maven: com.codahale.metrics:metrics-core:3.0.2" level="project" />
+    <orderEntry type="library" name="Maven: io.dropwizard.metrics:metrics-healthchecks:3.1.0" level="project" />
     <orderEntry type="module-library">
       <library name="Maven: com.lo54.lo54ecole:lo54ecole:1.0-SNAPSHOT">
         <CLASSES>

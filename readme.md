@@ -1,7 +1,7 @@
 ## Running the app
 
 ```bash
-# Launch Database :
+# Launch Database and graphite :
 $ docker-compose up
 
 # Enter inside database :

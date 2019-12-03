@@ -72,6 +72,13 @@
       <artifactId>metrics-jvm</artifactId>
       <version>3.0.2</version>
     </dependency>
+    <!-- https://mvnrepository.com/artifact/io.dropwizard.metrics/metrics-healthchecks -->
+    <dependency>
+      <groupId>io.dropwizard.metrics</groupId>
+      <artifactId>metrics-healthchecks</artifactId>
+      <version>3.1.0</version>
+    </dependency>
+
 
     <dependency>
       <groupId>com.lo54.lo54ecole</groupId>

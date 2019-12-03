@@ -1,6 +1,7 @@
 package servlets;
 
 import com.codahale.metrics.*;
+import com.codahale.metrics.Timer;
 import com.codahale.metrics.graphite.Graphite;
 import com.codahale.metrics.graphite.GraphiteReporter;
 import com.codahale.metrics.jvm.GarbageCollectorMetricSet;
@@ -26,28 +27,20 @@ public class CatalogServlet extends HttpServlet {
 
     CourseSessionService courseSessionService = new CourseSessionService();
     LocationService locationService = new LocationService();
-
+    MetricRegistry metricRegistry;
+    private Meter meter;
+    private Timer timer;
 
     public void init() throws ServletException
     {
-        MetricRegistry metricRegistry = new MetricRegistry();
+        metricRegistry = new MetricRegistry();
         metricRegistry.register("gc", new GarbageCollectorMetricSet());
         metricRegistry.register("memory", new MemoryUsageGaugeSet());
         metricRegistry.register("threads", new ThreadStatesGaugeSet());
 
-        Meter meter = metricRegistry.meter("meter");
-        meter.mark();
-        meter.mark(200);
-        Histogram histogram = metricRegistry.histogram("histogram");
-        histogram.update(12);
-        histogram.update(17);
-        Counter counter = metricRegistry.counter("counter");
-        counter.inc();
-        counter.dec();
-
         final Graphite graphite = new Graphite(new InetSocketAddress("localhost", 2003));
         final GraphiteReporter reporter = GraphiteReporter.forRegistry(metricRegistry)
-                .prefixedWith("prefix")
+                .prefixedWith("lo54")
                 .convertRatesTo(TimeUnit.SECONDS)
                 .convertDurationsTo(TimeUnit.MILLISECONDS)
                 .filter(MetricFilter.ALL)
@@ -59,6 +52,15 @@ public class CatalogServlet extends HttpServlet {
     public void doGet(HttpServletRequest request,
                       HttpServletResponse response)
             throws ServletException, IOException {
+        //timer
+        timer = metricRegistry.timer("timer_get_catalog");
+        final Timer.Context context = timer.time();
+        //meter
+        meter = metricRegistry.meter("meter_get_catalog");
+        meter.mark();
+
+
+
         //get all location
         List<Location> listLocation = locationService.getAllLocation();
 
@@ -90,9 +92,13 @@ public class CatalogServlet extends HttpServlet {
         //set attributes for jsp
         request.setAttribute("listCourseSession", listCourseSession);
         request.setAttribute("listLocation", listLocation);
-        this.getServletContext().
-                getRequestDispatcher( "/WEB-INF/catalog.jsp" ).
-                forward( request, response );
+        try {
+            this.getServletContext().
+                    getRequestDispatcher("/WEB-INF/catalog.jsp").
+                    forward(request, response);
+        }finally {
+            context.stop();
+        }
     }
 
 }

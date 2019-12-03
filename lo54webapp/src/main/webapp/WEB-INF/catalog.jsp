@@ -92,5 +92,7 @@
             out.println("</table>");
         }
     %>
+    <br/>
+    <a href="/healthcheck">Voir les healthchecks</a>
 </body>
 </html>
