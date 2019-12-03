@@ -8,7 +8,7 @@ import java.util.List;
 public class LocationService {
     public Location getLocationByCity(String city){
         LocationDAO locationDAO = new LocationDAO();
-        return locationDAO.GetByCity(city);
+        return locationDAO.getByCity(city);
     }
 
     public List<Location> getAllLocation(){
@@ -18,7 +18,7 @@ public class LocationService {
 
     public void saveLocation(Location location){
         LocationDAO locationDAO = new LocationDAO();
-        locationDAO.Save(location);
+        locationDAO.save(location);
     }
 
 }

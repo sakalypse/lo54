@@ -8,12 +8,12 @@ public class ClientService {
 
     public Client getClientById(int id){
         ClientDAO clientDAO = new ClientDAO();
-        return clientDAO.GetById(id);
+        return clientDAO.getById(id);
     }
 
     public void saveClient(Client c){
         ClientDAO clientDAO = new ClientDAO();
-        clientDAO.Save(c);
+        clientDAO.save(c);
     }
 
     public int getCountClientByCourseSession(CourseSession courseSession){

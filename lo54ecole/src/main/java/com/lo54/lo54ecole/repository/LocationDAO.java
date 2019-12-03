@@ -12,7 +12,7 @@ import java.util.List;
 public class LocationDAO {
     public LocationDAO() { }
 
-    public void Save(Location l){
+    public void save(Location l){
         Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {
@@ -43,7 +43,7 @@ public class LocationDAO {
         }
     }
 
-    public Location GetByCity(String city){
+    public Location getByCity(String city){
         Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {

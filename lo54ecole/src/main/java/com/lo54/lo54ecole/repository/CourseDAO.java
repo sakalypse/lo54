@@ -10,7 +10,7 @@ import org.hibernate.Transaction;
 public class CourseDAO {
     public CourseDAO() { }
 
-    public void Save(Course c){
+    public void save(Course c){
         Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {
@@ -25,7 +25,7 @@ public class CourseDAO {
         }
     }
 
-    public Course GetByTitle(String title) {
+    public Course getByTitle(String title) {
         Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx = null;
         try {

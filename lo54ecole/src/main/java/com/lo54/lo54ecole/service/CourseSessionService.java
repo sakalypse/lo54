@@ -9,7 +9,7 @@ import java.util.List;
 public class CourseSessionService {
     public CourseSession getCourseSessionById(int id){
         CourseSessionDAO csDao = new CourseSessionDAO();
-        return csDao.GetById(id);
+        return csDao.getById(id);
     }
 
 
@@ -36,6 +36,6 @@ public class CourseSessionService {
 
     public void saveCourseSession(CourseSession cs){
         CourseSessionDAO csDao = new CourseSessionDAO();
-        csDao.Save(cs);
+        csDao.save(cs);
     }
 }

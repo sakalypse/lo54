@@ -15,7 +15,7 @@ import com.lo54.lo54ecole.entity.Client;
 public class ClientDAO {
     public ClientDAO() { }
 
-    public void Save(Client c){
+    public void save(Client c){
         Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {
@@ -30,7 +30,7 @@ public class ClientDAO {
         }
     }
 
-    public Client GetById(long id){
+    public Client getById(long id){
         Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {

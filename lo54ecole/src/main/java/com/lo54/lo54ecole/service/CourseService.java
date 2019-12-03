@@ -6,11 +6,11 @@ import com.lo54.lo54ecole.repository.CourseDAO;
 public class CourseService {
     public Course getCourseByTitle(String title){
         CourseDAO courseDAO = new CourseDAO();
-        return courseDAO.GetByTitle(title);
+        return courseDAO.getByTitle(title);
     }
 
     public void saveCourse(Course c){
         CourseDAO courseDAO = new CourseDAO();
-        courseDAO.Save(c);
+        courseDAO.save(c);
     }
 }

@@ -15,7 +15,7 @@ import java.util.List;
 public class CourseSessionDAO {
     public CourseSessionDAO() { }
 
-    public void Save(CourseSession cs){
+    public void save(CourseSession cs){
         Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {
@@ -106,7 +106,7 @@ public class CourseSessionDAO {
         }
     }
 
-    public CourseSession GetById(long id){
+    public CourseSession getById(long id){
         Session sess = HibernateUtil.getSessionFactory().getCurrentSession();
         Transaction tx=null;
         try {
