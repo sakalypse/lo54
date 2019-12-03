@@ -22,7 +22,8 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-@WebServlet( name="CatalogServlet", urlPatterns = {"", "/", "/catalog"}, loadOnStartup = 1 )
+@WebServlet( name="CatalogServlet",
+        urlPatterns = {"", "/", "/catalog"}, loadOnStartup = 1 )
 public class CatalogServlet extends HttpServlet {
 
     CourseSessionService courseSessionService = new CourseSessionService();
@@ -38,7 +39,8 @@ public class CatalogServlet extends HttpServlet {
         metricRegistry.register("memory", new MemoryUsageGaugeSet());
         metricRegistry.register("threads", new ThreadStatesGaugeSet());
 
-        final Graphite graphite = new Graphite(new InetSocketAddress("localhost", 2003));
+        final Graphite graphite = new Graphite(
+                new InetSocketAddress("localhost", 2003));
         final GraphiteReporter reporter = GraphiteReporter.forRegistry(metricRegistry)
                 .prefixedWith("lo54")
                 .convertRatesTo(TimeUnit.SECONDS)
