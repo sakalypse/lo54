@@ -1,3 +1,6 @@
+Projet J2EE de gestion d'inscription à des cours.
+Intégration de metrics au projet avec https://metrics.dropwizard.io/
+
 ## Running the app
 
 ```bash
